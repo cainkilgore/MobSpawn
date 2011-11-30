@@ -9,8 +9,6 @@ import org.bukkit.entity.Player;
 
 public class MobExecutor implements CommandExecutor
 {
-	static Util util;
-	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args)
 	{
 		if(s instanceof Player) {
@@ -21,11 +19,11 @@ public class MobExecutor implements CommandExecutor
 						try {
 							((Player) s).getWorld().spawnCreature(((Player) s).getTargetBlock(null, 0).getLocation(), CreatureType.valueOf(args[0].toUpperCase()));
 						} catch (Exception e) {
-							util.deny((Player) s, "Something went wrong. Try again?");
+							Util.deny((Player) s, "Something went wrong. Try again?");
 						}
-						util.success((Player) s, "Mob spawned successfully!");
+						Util.success((Player) s, "Mob spawned successfully!");
 					} else {
-						util.deny((Player) s, "Mob spawn denied. No permission.");
+						Util.deny((Player) s, "Mob spawn denied. No permission.");
 					}
 				}
 			}
