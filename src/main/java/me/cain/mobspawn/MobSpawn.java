@@ -12,7 +12,7 @@ public class MobSpawn extends JavaPlugin
 	
 	public void onDisable()
 	{
-		System.out.println("[MobSpawn] MobSpawner has been disabled!");
+		Util.console("[" + this.getDescription().getName() + "] MobSpawner has been disabled!");
 	}
 	
 }
