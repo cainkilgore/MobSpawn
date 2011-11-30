@@ -1,6 +1,7 @@
 package main.java.me.cain.mobspawn;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -18,7 +19,8 @@ public class MobExecutor implements CommandExecutor
 				else {
 					if(MobSpawn.hasNode(sender, "mob.spawn")) {
 						try {
-							sender.getWorld().spawnCreature(sender.getTargetBlock(null, 0).getLocation(), CreatureType.valueOf(args[0].toUpperCase()));
+							Location block = sender.getTargetBlock(null, 0).getLocation();
+							sender.getWorld().spawnCreature(block, CreatureType.valueOf(args[0].toUpperCase()));
 						} catch (Exception e) {
 							Util.deny(sender, "Something went wrong. Try again?");
 						}

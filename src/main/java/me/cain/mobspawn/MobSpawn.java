@@ -17,6 +17,7 @@ public class MobSpawn extends JavaPlugin
 	{
 		getServer().getPluginCommand("mob").setExecutor(new MobExecutor());
 		Util.console("[" + this.getDescription().getName() + "] MobSpawner has been enabled!");
+		OldPermissions();
 		plugin = this;
 	}
 	
