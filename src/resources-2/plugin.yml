@@ -1,7 +1,0 @@
-name: MobSpawn
-version: 1.00
-author: CainFoool
-main: me.cain.mobspawn.MobSpawn
-commands:
-   mob:
-       description: 'Spawn a mob, an attempt to change iffas mind'
