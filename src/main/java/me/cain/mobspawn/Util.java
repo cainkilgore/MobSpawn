@@ -1,4 +1,4 @@
-package me.cain.mobspawn;
+package main.java.me.cain.mobspawn;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;

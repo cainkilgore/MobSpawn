@@ -1,0 +1,7 @@
+name: MobSpawn
+version: 1.00
+author: CainFoool
+main: main.java.me.cain.mobspawn.MobSpawn
+commands:
+   mob:
+       description: 'Teleport to a player'
